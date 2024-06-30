@@ -31,7 +31,6 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest, windows-latest]
         include:
           - os: windows-latest
             triplet: x64-windows-static
