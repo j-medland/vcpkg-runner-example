@@ -38,14 +38,14 @@ jobs:
             triplet: x64-linux
           - os: windows-latest
             triplet: x86-windows-static
-    #env:
+    env:
     #
     # [OPTIONAL] Define the vcpkg's triplet 
     # you want to enforce, otherwise the default one 
     # for the hosting system will be automatically
     # choosen (x64 is the default on all platforms, 
     # e.g. x64-osx).
-    # VCPKG_DEFAULT_TRIPLET: ${{ matrix.triplet }} 
+      VCPKG_DEFAULT_TRIPLET: ${{ matrix.triplet }} 
 
     steps:
       - uses: actions/checkout@v4
