@@ -31,12 +31,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-latest, windows-latest]
+        os: [ubuntu-latest, windows-latest, windows-latest]
         include:
           - os: windows-latest
-            triplet: [ x64-windows-static , x86-windows-static]
+            triplet: x64-windows-static
           - os: ubuntu-latest
             triplet: x64-linux
+          - os: windows-latest
+            triplet: x86-windows-static
     #env:
     #
     # [OPTIONAL] Define the vcpkg's triplet 
